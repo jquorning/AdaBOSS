@@ -1,11 +1,13 @@
 # Abram
 
-The OS.
-Starting af Application Framework.
-Adding nano-kernel.
-Making it work.
-Porting OS features (network etc from Hurd).
+The OS. (Not a UNIX variant)
 
+* Starting af Application Framework as application.
+* Adding nano-kernel.
+* Making it work.
+* Rewrite OS services (network etc from Hurd) to Ada.
+* Add UNIX API
+* Port applications (Debian style)
 
 ## Status
 
@@ -13,11 +15,12 @@ Initial
 
 
 ## Configuring
-**$** cd source-var
 
-**$** edit PROGRAM_VERSION
+**$** edit var/PROGRAM_NAME
 
-**$** ./create-setup-ads.sh
+**$** edit var/PROGRAM_VERSION
+
+**$** make setup
 
 
 ## Building
@@ -25,6 +28,6 @@ Initial
 
 or
 
-**$** gprbuild abarm.gpr
+**$** gprbuild abram.gpr
 
 
