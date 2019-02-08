@@ -1,0 +1,39 @@
+--
+--  The author disclaims copyright to this source code.  In place of
+--  a legal notice, here is a blessing:
+--
+--    May you do good and not evil.
+--    May you find forgiveness for yourself and forgive others.
+--    May you share freely, not taking more than you give.
+--
+-- Bibleroulette GPR project
+--
+
+project Bibleroulette is
+
+  for Languages    use ("Ada");
+  for Source_Dirs  use
+    ("source/",
+     "source-var/");
+  for Object_Dir   use ".object/";
+  for Exec_Dir     use "binary/";
+  for Main         use ("bibleroulette_program.adb");
+
+  package Builder is
+
+     for Default_Switches ("Ada") use
+       ("-g",
+        "-O2",
+        "-gnatf",
+        "-gnatwa",
+        "-gnatwj",
+        "-gnat2005",
+        "-gnaty",
+        "-gnatyM99");
+
+     for Executable ("bibleroulette_program.adb")
+       use "bibleroulette";
+
+  end Builder;
+
+end Bibleroulette;
