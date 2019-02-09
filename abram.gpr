@@ -9,15 +9,15 @@
 -- Bibleroulette GPR project
 --
 
-project Bibleroulette is
+project Abram is
 
   for Languages    use ("Ada");
   for Source_Dirs  use
-    ("source/",
-     "source-var/");
+    ("spec/",
+     "body/");
   for Object_Dir   use ".object/";
   for Exec_Dir     use "binary/";
-  for Main         use ("bibleroulette_program.adb");
+  for Main         use ("abram_program.adb");
 
   package Builder is
 
@@ -27,13 +27,13 @@ project Bibleroulette is
         "-gnatf",
         "-gnatwa",
         "-gnatwj",
-        "-gnat2005",
+        "-gnat2012",
         "-gnaty",
         "-gnatyM99");
 
-     for Executable ("bibleroulette_program.adb")
-       use "bibleroulette";
+     for Executable ("abram_program.adb")
+       use "abram";
 
   end Builder;
 
-end Bibleroulette;
+end Abram;
