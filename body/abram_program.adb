@@ -12,6 +12,8 @@ with Ada.Command_Line;
 
 with Command_Line;
 
+with Programs.My_Programs;
+
 procedure Abram_Program is
 
    use Ada.Command_Line;
@@ -37,5 +39,14 @@ begin
    end case;
 
    Ada.Text_IO.Put_Line ("Abram says: ""Hello, World!"".");
+
+   declare
+      use Programs.My_Programs;
+      The_Program : My_Program;
+   begin
+      The_Program.Service;
+   end;
+
+   Ada.Text_IO.Put_Line ("Abram says: ""Auf Wiedersehen!"".");
 
 end Abram_Program;
