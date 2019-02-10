@@ -12,7 +12,9 @@ with Ada.Command_Line;
 
 with Command_Line;
 
-with Programs.My_Programs;
+with Programs.Workers.Scheduled;
+with Programs.Workers.Stateles;
+with Programs.Workers.Stateful;
 
 procedure Abram_Program is
 
@@ -41,10 +43,16 @@ begin
    Ada.Text_IO.Put_Line ("Abram says: ""Hello, World!"".");
 
    declare
-      use Programs.My_Programs;
-      The_Program : My_Program;
+      The_Scheduled_Worker : Programs.Workers.Scheduled.Scheduled;
+      The_Stateles_Worker  : Programs.Workers.Stateles.Stateles_Worker;
+      The_Stateful_Worker  : Programs.Workers.Stateful.Stateful_Worker;
    begin
-      The_Program.Service;
+      The_Stateles_Worker.Service;
+      The_Stateful_Worker.Service;
+      for I in 1 .. 10 loop
+         The_Scheduled_Worker.Service;
+         delay 1.000;
+      end loop;
    end;
 
    Ada.Text_IO.Put_Line ("Abram says: ""Auf Wiedersehen!"".");

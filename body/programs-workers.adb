@@ -9,22 +9,17 @@
 
 with Ada.Text_IO;
 
-package body Programs is
+package body Programs.Workers is
 
-   procedure Service (The_Program : Program)
+
+   overriding
+   procedure Service (The_Program : Worker)
    is
       pragma Unreferenced (The_Program);
       use Ada.Text_IO;
    begin
-      Put_Line ("Program Service");
+      Put_Line ("The worker is working.");
    end Service;
 
 
---     procedure Message (The_Program : Program;
---                        The_Message : String)
---     is
---     begin
---        null;  --  Put on queue.
---     end Message;
-
-end Programs;
+end Programs.Workers;
