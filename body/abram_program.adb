@@ -16,6 +16,8 @@ with Programs.Workers.Scheduled;
 with Programs.Workers.Stateles;
 with Programs.Workers.Stateful;
 
+with Mediators.Security;
+
 procedure Abram_Program is
 
    use Ada.Command_Line;
@@ -43,9 +45,10 @@ begin
    Ada.Text_IO.Put_Line ("Abram says: ""Hello, World!"".");
 
    declare
-      The_Scheduled_Worker : Programs.Workers.Scheduled.Scheduled;
-      The_Stateles_Worker  : Programs.Workers.Stateles.Stateles_Worker;
-      The_Stateful_Worker  : Programs.Workers.Stateful.Stateful_Worker;
+      The_Security_Mediator : Mediators.Security.Security_Mediator;
+      The_Scheduled_Worker  : Programs.Workers.Scheduled.Scheduled;
+      The_Stateles_Worker   : Programs.Workers.Stateles.Stateles_Worker;
+      The_Stateful_Worker   : Programs.Workers.Stateful.Stateful_Worker;
    begin
       The_Stateles_Worker.Service;
       The_Stateful_Worker.Service;
