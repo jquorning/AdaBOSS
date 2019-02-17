@@ -6,10 +6,8 @@
 --    May you find forgiveness for yourself and forgive others.
 --    May you share freely, not taking more than you give.
 --
--- Bibleroulette GPR project
---
 
-project Abram is
+project Odin is
 
   for Languages    use ("Ada");
   for Source_Dirs  use
@@ -17,7 +15,7 @@ project Abram is
      "body/");
   for Object_Dir   use ".object/";
   for Exec_Dir     use "binary/";
-  for Main         use ("abram_program.adb");
+  for Main         use ("odin_program.adb");
 
   package Builder is
 
@@ -31,9 +29,9 @@ project Abram is
         "-gnaty",
         "-gnatyM99");
 
-     for Executable ("abram_program.adb")
-       use "abram";
+     for Executable ("odin_program.adb")
+       use "odin";
 
   end Builder;
 
-end Abram;
+end Odin;

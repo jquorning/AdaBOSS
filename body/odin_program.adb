@@ -18,7 +18,7 @@ with Programs.Workers.Stateful;
 
 with Mediators.Security;
 
-procedure Abram_Program is
+procedure Odin_Program is
 
    use Ada.Command_Line;
    use Command_Line;
@@ -60,4 +60,4 @@ begin
 
    Ada.Text_IO.Put_Line ("Abram says: ""Auf Wiedersehen!"".");
 
-end Abram_Program;
+end Odin_Program;

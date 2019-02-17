@@ -8,10 +8,10 @@
 ##
 
 build:
-	gprbuild -k -p abram.gpr
+	gprbuild -k -p odin.gpr
 
 clean:
-	gprclean -q abram.gpr
+	gprclean -q odin.gpr
 
 setup:
 	tools/create-setup-adb.sh
