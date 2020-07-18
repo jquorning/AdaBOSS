@@ -1,4 +1,4 @@
-# Abram
+# GoodOS
 
 The OS. (Not a UNIX variant)
 
