@@ -1,33 +1,19 @@
-# GoodOS
+Adaptable Bus OS as Services
+---
+Just a fancy name. Still wip'ping .. ;-)
 
-The OS. (Not a UNIX variant)
+The ultimate operating system (for now..) - Perhaps PanUlitimOS
 
-* Starting af Application Framework as application.
+* Starting Application Framework as application.
 * Adding nano-kernel.
-* Making it work.
+* Making it work - planning phase postponed atm.
 * Rewrite OS services (network etc from Hurd) to Ada.
+* Implement Ada Runtime at low level
+* Inspired by; Hurd (terrible name), Darwin, XNS, Linux, AdaRT.
+* Motto: Organize while wandering. Latin anyone ..?
 * Add UNIX API
 * Port applications (Debian style)
 
-## Status
-
+Status
+----
 Initial
-
-
-## Configuring
-
-**$** edit var/PROGRAM_NAME
-
-**$** edit var/PROGRAM_VERSION
-
-**$** make setup
-
-
-## Building
-**$** make
-
-or
-
-**$** gprbuild abram.gpr
-
-
